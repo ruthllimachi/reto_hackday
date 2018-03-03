@@ -1,0 +1,38 @@
+{
+  "name": "creacion_horarios",
+  "version": "1.0.0",
+  "description": "Creacion de Horarios",
+  "authors": [
+    "Ruth Limachi"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "reservas"
+  ],
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.16",
+    "angular-route": "~1.3.16",
+    "bootstrap": "3.3.2",
+    "components-font-awesome": "4.2.0",
+    "angular-ui-grid": "3.0.1",
+    "ng-grid": "2.0.14",
+    "angular-animate": "1.3.0",
+    "angular-cookies": "1.3.0",
+    "angular-resource": "1.3.0",
+    "angular-sanitize": "1.3.0",
+    "angular-touch": "1.3.0",
+    "angular-ui-router": "0.2.13",
+    "jquery-legacy": "jquery#^1",
+    "jquery-modern": "jquery#^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "ngMask": "angular-mask#^3.1.1"
+  }
+}
