@@ -1,0 +1,109 @@
+<div class="container-fluid page-container" style="margin: 0 15px 0px 15px;">
+    <div class="panel panel-primary page-container" align="center">
+        <div class="panel-heading" align="center">
+            <h3 class="panel-title">HORARIOS</h3>
+        </div>
+        <table>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <label class="control-label text-left inline">Materia: </label>
+                </td>
+                <td>
+                    <label class="control-label text-left inline">Aula: </label>
+                </td>
+                <td>
+                    <label class="control-label text-left inline">Dia Semana: </label>
+                </td>
+                <td>
+                    <label class="control-label text-left inline">Hora Inicio: </label>
+                </td>
+                <td>
+                    <label class="control-label text-left inline">Hora Final: </label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-md" ng-click="nuevoHorario()">
+                            <span class="glyphicon glyphicon-bishop"></span>&nbsp;Nuevo Horario
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <select class="form-control" ng-model="horario.fid_materia" required>
+                            <option value="" label="[Seleccione]"></option>
+                            <option ng-repeat="materia in listaMaterias" value="{{materia.id_materia}}" ng-selected="materia.id_materia == horario.fid_materia">
+                                {{materia.codigo}} - {{materia.descripcion}}
+                            </option>
+                        </select>
+                    </div>
+
+                </td>
+                <td>
+                    <div class="form-group">
+                        <select class="form-control" ng-model="horario.fid_aula" required required>
+                            <option value="" label="[Seleccione]"></option>
+                            <option ng-repeat="aula in listaAulas" value="{{aula.id_aula}}" ng-selected="aula.id_aula == horario.fid_aula">
+                                {{aula.codigo}} - {{aula.descripcion}}
+                            </option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <select class="form-control" ng-model="horario.dia" required>
+                            <option value="" label="[Seleccione]"></option>
+                            <option ng-repeat="dia in listaDias" value="{{dia}}" ng-selected="dia == horario.dia">
+                                {{dia}}
+                            </option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <input class="form-control" ng-model="horario.hora_inicio" type="text" mask="99:99:99" required style="text-align: right; width: 100px;"
+                        />
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <input class="form-control" ng-model="horario.hora_final" type="text" mask="99:99:99" required style="text-align: right; width: 100px;"
+                        />
+                    </div>
+                </td>
+
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-md" ng-click="adicionarHorario()">
+                            <span class="glyphicon glyphicon-bishop"></span>&nbsp;Adicionar
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-md" ng-click="actualizarHorario()">
+                            <span class="glyphicon glyphicon-bishop"></span>&nbsp;Actualizar
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+        <div id="grid1" ui-grid="gridOptions" ui-grid-selection style="height: 60%;width: 70%" class="grid1">
+        </div>
+    </div>
+</div>

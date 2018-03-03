@@ -32,7 +32,6 @@ app.service('service', ['$http', function ($http) {
         return $http.get('/api/aula/' + id);
     }
 
-
     this.listaMaterias = function () {
         return $http.get('/api/materias');
     }
@@ -43,5 +42,18 @@ app.service('service', ['$http', function ($http) {
 
     this.modificaMateria = function (data) {
         return $http.patch('/api/materia/' + data.id_materia, data);
+    }    
+
+    this.listaHorarios = function () {
+        return $http.get('/api/horarios');
     }
+
+    this.nuevoHorario = function (data) {
+        return $http.post('/api/horario/', data);
+    }
+
+    this.modificaHorario = function (data) {
+        return $http.patch('/api/horario/' + data.id_horario, data);
+    }
+
 }]);

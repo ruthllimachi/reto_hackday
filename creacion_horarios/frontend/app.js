@@ -21,5 +21,9 @@ app.config(function ($routeProvider) {
 			templateUrl: "materia/materia.html",
 			controller: "materiaCtrl"
 		})		
+		.when("/horario", {
+			templateUrl: "horario/horario.html",
+			controller: "horarioCtrl"
+		})		
 		.otherwise({ redirectTo: "/" });
 })
