@@ -17,5 +17,9 @@ app.config(function ($routeProvider) {
 			templateUrl: "aula/aula.html",
 			controller: "aulaCtrl"
 		})		
+		.when("/materia", {
+			templateUrl: "materia/materia.html",
+			controller: "materiaCtrl"
+		})		
 		.otherwise({ redirectTo: "/" });
 })

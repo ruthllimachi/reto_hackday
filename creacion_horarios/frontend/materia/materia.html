@@ -1,0 +1,81 @@
+<div class="container-fluid page-container" style="margin: 0 15px 0px 15px;">
+    <div class="panel panel-primary page-container" align="center">
+        <div class="panel-heading" align="center">
+            <h3 class="panel-title">MATERIAS</h3>
+        </div>
+        <table>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <label class="control-label text-left inline">Docente: </label>
+                </td>
+                <td>
+                    <label class="control-label text-left inline">Codigo Materia: </label>
+                </td>
+                <td>
+                    <label class="control-label text-left inline">Descripción Materia: </label>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-md" ng-click="nuevaMateria()">
+                            <span class="glyphicon glyphicon-bishop"></span>&nbsp;Nueva Materia
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <select class="form-control" ng-model="materia.fid_docente" required ng-disabled="sw">
+                            <option value="" label="[Seleccione]"></option>
+                            <option ng-repeat="docente in listaDocentes" value="{{docente.id_docente}}" ng-selected="docente.id_docente == materia.fid_docente">
+                                {{docente.nombres}} - {{docente.apellidos}}
+                            </option>
+                        </select>
+                    </div>
+
+                </td>
+                <td>
+                    <div class="form-group">
+                        <input class="form-control" ng-model="materia.codigo" type="text" required required ng-disabled="sw"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <input class="form-control" ng-model="materia.descripcion" type="text" required>
+
+                    </div>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-md" ng-click="adicionarMateria()">
+                            <span class="glyphicon glyphicon-bishop"></span>&nbsp;Adicionar
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-md" ng-click="actualizarMateria()">
+                            <span class="glyphicon glyphicon-bishop"></span>&nbsp;Actualizar
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+        <div id="grid1" ui-grid="gridOptions" ui-grid-selection style="height: 60%;width: 70%" class="grid1">
+        </div>
+    </div>
+</div>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
     <link rel="stylesheet" href="bower_components/ng-grid/ng-grid.css" />
     <link rel="stylesheet" href="styles/main.scss">
-    <title>Reserva de Salas</title>
+    <title>Creacion de Horarios</title>
 </head>
 
 <body ng-controller="mainCtrl">
@@ -17,7 +17,7 @@
         <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Reserva de Salas</a>
+                    <a class="navbar-brand" href="/">Horarios</a>
                 </div>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -32,6 +32,10 @@
                     <li>
                         <a href="#repote">
                             <i class="fa fa-shield"></i> Reportes</a>
+                    </li>
+                    <li>
+                        <a href="#materia">
+                            <i class="fa fa-shield"></i> Materias</a>
                     </li>
                     <li>
                         <a href="#docente">
@@ -50,7 +54,7 @@
     <div id="main">
         <!-- angular templating -->
         <!-- this is where content will be injected -->
-        <div ng-view></div>
+        <div align="center" ng-view></div>
     </div>
 
     <!-- FOOTER -->
@@ -69,8 +73,9 @@
     <script src="bower_components/ngMask/dist/ngMask.js"></script>
     <script src="./app.js"></script>
     <script src="./service.js"></script>
-    <script src="./sala/salaCtrl.js"></script>
-    <script src="./reserva/reservaCtrl.js"></script>
+    <script src="./docente/docenteCtrl.js"></script>
+    <script src="./aula/aulaCtrl.js"></script>
+    <script src="./materia/materiaCtrl.js"></script>
 
 </body>
 

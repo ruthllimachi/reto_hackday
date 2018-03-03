@@ -6,7 +6,7 @@ app.service('service', ['$http', function ($http) {
     this.modificarDocente = function (data) {
         return $http.patch('/api/docente/' + data.id_docente, data);
     }
-    
+
 
     this.nuevaDocente = function (data) {
         return $http.post('/api/docente/', data);
@@ -19,7 +19,7 @@ app.service('service', ['$http', function ($http) {
     this.listaAulas = function () {
         return $http.get('/api/aulas');
     }
-    
+
     this.modificarAula = function (data) {
         return $http.patch('/api/aula/' + data.id_aula, data);
     }
@@ -31,17 +31,17 @@ app.service('service', ['$http', function ($http) {
     this.buscarAula = function (id) {
         return $http.get('/api/aula/' + id);
     }
-    //////////////////////////////////////////    
 
-    this.listaReservas = function () {
-        return $http.get('/api/reservas');
+
+    this.listaMaterias = function () {
+        return $http.get('/api/materias');
     }
 
-    this.nuevaReserva = function (data) {
-        return $http.post('/api/reserva/', data);
+    this.nuevaMateria = function (data) {
+        return $http.post('/api/materia/', data);
     }
 
-    this.modificaReserva = function (data) {
-        return $http.patch('/api/reserva/' + data.id_reserva, data);
+    this.modificaMateria = function (data) {
+        return $http.patch('/api/materia/' + data.id_materia, data);
     }
 }]);

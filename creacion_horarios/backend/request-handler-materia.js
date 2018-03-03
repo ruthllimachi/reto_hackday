@@ -96,8 +96,9 @@ function crearMateria(data) {
 }
 
 function modificarMateria(data, idMateria) {
+  var descripcion = data.descripcion; 
   return materia.update({
-    estado
+    descripcion
   }, {
       where: {
         id_materia: idMateria,
