@@ -17,7 +17,7 @@ Los datos para la base se encuentra en db.js en la carpeta backend en creacion_h
 
 BackEnd
 =============
-Para backend se utlizo NodeJS y ExpressJS.
+Para backend se utlizo NodeJS, ExpressJS y sequelize.
 Con control de dependencias npm
 Todo en la carpeta backend
 
