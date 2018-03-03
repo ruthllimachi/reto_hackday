@@ -1,0 +1,27 @@
+#bodyTable {
+    height: 40px;
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+  }
+  .tablagen{
+    display: table;
+    width: 100%;
+  }
+  .fila{
+    display: table-row;
+  }
+  .col1{
+    display: table-cell;
+    width: 15%;
+  }
+  .col2{
+    display: table-cell;
+    width: 40%;
+  }
+  
+  .col3{
+    display: table-cell;
+    width: 25%;
+  }
+  

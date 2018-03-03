@@ -1,0 +1,112 @@
+<div align="center">
+    <table>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <label class="control-label text-left inline">Sala: </label>
+            </td>
+            <td>
+                <label class="control-label text-left inline">Persona: </label>
+            </td>
+            <td>
+                <label class="control-label text-left inline">Fecha Reserva: </label>
+            </td>
+            <td>
+                <label class="control-label text-left inline">Hora Inicio: </label>
+            </td>
+            <td>
+                <label class="control-label text-left inline">Hora Final: </label>
+            </td>
+            <td>
+                <label class="control-label text-left inline">Estado: </label>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <button class="btn btn-success btn-md" ng-click="nuevaReserva()">
+                        <span class="glyphicon glyphicon-bishop"></span>&nbsp;Nuevo
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <select class="form-control" ng-model="reserva.fid_sala" required ng-disabled="sw">
+                        <option value="" label="[Seleccione]"></option>
+                        <option ng-repeat="sala in listaSalas" value="{{sala.id_sala}}" ng-selected="sala.id_sala == reserva.fid_sala">
+                            {{sala.codigo}} - {{sala.descripcion}}
+                        </option>
+                    </select>
+                </div>
+
+            </td>
+            <td>
+                <div class="form-group">
+                    <select class="form-control" ng-model="reserva.fid_persona" required required ng-disabled="sw">
+                        <option value="" label="[Seleccione]"></option>
+                        <option ng-repeat="persona in listaPersonas" value="{{persona.id_persona}}" ng-selected="persona.id_persona == reserva.fid_persona">
+                            {{persona.nombres}} {{persona.apellidos}}
+                        </option>
+                    </select>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <input class="form-control" ng-model="fecha_reserva_view" type="date" required required ng-disabled="sw"/>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <input class="form-control" ng-model="reserva.hora_inicio" type="text" mask="99:99:99" required 
+                    style="text-align: right; width: 100px;" ng-disabled="sw"/>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <input class="form-control" ng-model="reserva.hora_final" type="text" mask="99:99:99" 
+                    required style="text-align: right; width: 100px;"
+                    ng-disabled="sw"/>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <select class="form-control" ng-model="reserva.estado" required>
+                        <option value="" label="[Seleccione]"></option>
+                        <option ng-repeat="estado in listaEstados" value="{{estado}}" ng-selected="estado == reserva.estado">
+                            {{estado}}
+                        </option>
+                    </select>
+                </div>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <div class="form-group">
+                    <button class="btn btn-success btn-md" ng-click="adicionarReserva()">
+                        <span class="glyphicon glyphicon-bishop"></span>&nbsp;Adicionar
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-md" ng-click="actualizarReserva()">
+                        <span class="glyphicon glyphicon-bishop"></span>&nbsp;Actualizar
+                    </button>
+                </div>
+            </td>            
+        </tr>
+    </table>
+
+
+    <div id="grid1" ui-grid="gridOptions" ui-grid-selection style="height: 60%;width: 70%" class="grid1">
+    </div>
+</div>

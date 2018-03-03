@@ -28,5 +28,4 @@ router.post('/horario', requestHandlerHorario.postHorario);
 router.patch('/horario/:idMateria', requestHandlerHorario.patchHorario);
 
 
-
 module.exports = router;

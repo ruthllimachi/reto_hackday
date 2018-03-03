@@ -1,0 +1,35 @@
+<div align="center">
+    <h1>Lista de Docente</h1>
+    <table class="table" style="width: 40%;">
+        <thead>
+            <tr>
+                <th style="width:100px;">Nombres</th>
+                <th>Apellidos</th>
+                <th>Action</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="width:100px;">
+                    <input class="form-control" ng-model="docente.nombres">
+                </td>
+                <td>
+                    <input class="form-control" ng-model="docente.apellidos">
+                </td>
+                <td>
+                    <buttom style="width:100px;" class="btn btn-primary" ng-click="addDocente()">Add</buttom>
+                </td>
+                <td>
+                    <buttom style="width:100px;" class="btn btn-info" ng-click="updateDocente()">Update</buttom>
+                </td>
+            </tr>
+            <tr ng-repeat="docente in lista">
+                <td style="width:100px;">{{docente.nombres}}</td>
+                <td>{{docente.apellidos}}</td>
+                <td style="width:100px;">
+                    <buttom class="btn btn-warning" ng-click="editDocente(docente.id_docente)">Edit</buttom>
+                </td>
+        </tbody>
+    </table>
+</div>

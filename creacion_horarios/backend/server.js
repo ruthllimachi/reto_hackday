@@ -29,7 +29,9 @@ app.use(morgan("dev"));
 //////app.set('view engine', 'html');
 
 app.use([bodyParser.json(), bodyParser.urlencoded({ extended: true })]);
-//////app.use(express.static(path.join(__dirname, '../frontend')));
+
+app.use(express.static(path.join(__dirname, '../frontend')));
+
 app.use((err, req, res, next) => {
   console.log(err);
   res.status(500).send('Server Error');
@@ -37,6 +39,6 @@ app.use((err, req, res, next) => {
 
 app.use('/api', routes);
 
-/* router.get('/', (req, res, next) => {
+router.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
-}); */
+}); 

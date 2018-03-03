@@ -15,6 +15,11 @@ exports.getMaterias = (req, res) => {
     });
 };
 
+/**
+ * Busca la materia 
+ * Tambien, si la materia ya existe no se puede asignar a otro docente 
+ */
+
 exports.getMateria = (req, res) => {
   Promise.resolve()
     .then(() => buscarMateria(req.params.idMateria))
@@ -25,6 +30,7 @@ exports.getMateria = (req, res) => {
       res.status(500).json('Error grave')
     });
 };
+
 
 exports.postMateria = (req, res) => {
   Promise.resolve()
@@ -104,3 +110,19 @@ function modificarMateria(data, idMateria) {
       return respuesta;
     }).catch(error => console.log(error));
 }
+
+function buscarCodigo(codigo_materia) {
+  return materia.findOne({
+    where: { codigo: codigo_materia },
+    include: [
+      { model: docente, as: 'docente' }
+    ],
+  })
+    .then(respuesta => {
+      console.log("\n***materia no valido encontrado ");
+      console.log(JSON.stringify(respuesta));
+      return respuesta;
+    }).catch(error => console.log(error));
+}
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="bower_components/ng-grid/ng-grid.css" />
+    <link rel="stylesheet" href="styles/main.scss">
+    <title>Reserva de Salas</title>
+</head>
+
+<body ng-controller="mainCtrl">
+    <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Reserva de Salas</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-home"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="#reserva">
+                            <i class="fa fa-comment"></i> Reservas</a>
+                    </li>
+                    <li>
+                        <a href="#repote">
+                            <i class="fa fa-shield"></i> Reportes</a>
+                    </li>
+                    <li>
+                        <a href="#docente">
+                            <i class="fa fa-shield"></i> Docentes</a>
+                    </li>
+                    <li>
+                        <a href="#aula">
+                            <i class="fa fa-shield"></i> Aulas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+        <hr>
+        <strong>- Ruth Limachi -</strong>
+    </footer>
+    <script src="bower_components/jquery-modern/dist/jquery.js"></script>
+    <script src="bower_components/jquery-legacy/dist/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="bower_components/ng-grid/build/ng-grid.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/ngMask/dist/ngMask.js"></script>
+    <script src="./app.js"></script>
+    <script src="./service.js"></script>
+    <script src="./sala/salaCtrl.js"></script>
+    <script src="./reserva/reservaCtrl.js"></script>
+
+</body>
+
+</html>
