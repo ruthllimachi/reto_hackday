@@ -11,6 +11,7 @@ Con cuatro tablas:
 - docente
 - materia
 - horario
+
 Existe entidad relacion entre docente - materia de 1-n
 Exite entidad relacion entre aula - horario de n - 1 y matria - horario de n - 1
 Los datos para la base se encuentra en db.js en la carpeta backend en creacion_horarios
@@ -29,9 +30,9 @@ Todo en la carpeta frontEnd
 
 Instalación
 =============
-- Para la instalacion se requiere ejecutar npm install para procesar el package.json que se encuentra en creacion_horarios
+Para la instalacion se requiere ejecutar npm install para procesar el package.json que se encuentra en creacion_horarios
 y para el frontend se requiere ejecuta bower install  que se encuentra en la carpeta fronend de creacion_horarios
-
+Para ejecutar node server.js o nodemon server.js desde la carpeta backend o node backend/server.js
 
 
 
