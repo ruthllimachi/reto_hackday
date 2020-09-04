@@ -25,7 +25,7 @@
     "morgan": "^1.9.0",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.29.2"
+    "sequelize": "^6.3.5"
   },
   "engines": {
     "node": "v8.9.4"
